@@ -11,7 +11,7 @@ const NewArrivalSlider = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const res = await fetch("http://localhost:5000/api/products");
+      const res = await fetch("https://luxora-backend-0gll.onrender.com/api/products");
       let data = await res.json();
 
       data = data.sort(() => Math.random() - 0.5);
