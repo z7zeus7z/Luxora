@@ -19,7 +19,7 @@ const ProductDetails = () => {
   };
   const fetchProduct = async () => {
     try {
-      const res = await fetch(`http://localhost:5000/api/products/${id}`);
+      const res = await fetch(`https://luxora-backend-0gll.onrender.com/api/products/${id}`);
       const data = await res.json();
       setProduct(data);
     } catch (error) {
