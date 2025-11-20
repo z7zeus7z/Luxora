@@ -1,0 +1,111 @@
+.cartContainer{
+    width: 80%;
+    margin: 0 auto;
+    padding: 3rem 0;
+
+    display: grid;
+    grid-template:repeat(3,auto)/1fr;
+    grid-template-areas: 
+    "PageTitle"
+    "Processes"
+    "ShoppingCart"
+    ;
+    gap: 5rem;
+}
+
+.pageTitle{
+  grid-area: PageTitle;
+  text-align: center;
+}
+
+.processes{
+  grid-area: Processes;
+}
+
+.process1{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid black;
+}
+
+.processNumber{
+  width: 3rem;
+  height: 3rem;
+  background-color: black;
+  border-radius: 1rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.shoppingCart{
+  grid-area: ShoppingCart;
+  display: grid;
+  grid-template:repeat(2,auto)/1fr;
+  grid-template-areas:
+  "ProductContainer"
+  "SummeryContainer"
+  ;
+  gap: 5rem;
+}
+/*-----------------------------------------------*/
+
+/*MEDIA*/
+@media (min-width:1000px) {
+  .shoppingCart{
+  grid-template:auto/2fr 1fr;
+  grid-template-areas:
+  "ProductContainer SummeryContainer"
+  ;
+  }
+  .QuantityTitle,
+  .PriceTitle,
+  .SubTotalTitle{
+    display: block;
+  }
+}
+/*=============================*/
+/*CHECKOUT*/
+.checkOutContainer{
+  display: grid;
+  grid-template:repeat(5,auto)/1fr;
+  grid-template-areas: 
+  "Contact"
+  "Address"
+  "Payment"
+  "Summary"
+  "Place"
+  ;
+  gap: 3rem;
+}
+ @media (min-width:1000px) {
+  .checkOutContainer{
+  display: grid;
+  grid-template:repeat(4,auto)/repeat(2,auto);
+  grid-template-areas: 
+  "Contact Summary"
+  "Address Summary"
+  "Payment Empty"
+  "Place   Empty "
+  ;
+  gap: 3rem;
+}
+ }
+ /*COMPLETE*/
+ .completeContainer{
+  padding: 1rem;
+  margin: 0 auto;
+  min-height: 40rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+ }
+@media (min-width:1000px) {
+  .completeContainer{
+    width: 50%;
+  }
+}

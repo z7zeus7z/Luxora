@@ -1,0 +1,200 @@
+.adminContainer{
+    width: 80%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 3rem 0 ;
+    display: grid;
+    grid-template:auto 1fr/1fr;
+    grid-template-areas: 
+    "Tabs"
+    "List"
+    ;
+}
+/*TABS*/
+.tabs{
+    grid-area: Tabs;
+    display: flex;
+    gap: 2rem;
+    color: gray;
+    cursor: pointer;
+}
+
+.activeTab{
+    color: black;
+}
+/*LIST*/
+.listItemContainer{
+    grid-area: List;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 900px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.formInputs label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: gray;
+}
+
+.formInputs input{
+    padding: 0.5rem ;
+    border-radius: 0.5rem;
+    border: 1px solid gray;
+}
+
+.dropDown{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding:  0.5rem 1rem;
+    border-radius: 0.5rem;
+    gap: 1rem;
+    background-color: white;
+}
+
+.dropDown p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dropZone {
+    border: 2px dashed gray;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    background: #fafafa;
+    transition: 0.2s;
+}
+
+.dropZone:hover {
+    background: #f0f0f0;
+}
+
+
+.previewContainer {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.previewContainer img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+}
+.previewBox {
+    position: relative;
+    cursor: pointer;
+}
+
+.previewBox img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    border: 2px solid transparent;
+    transition: 0.2s;
+}
+
+.previewBox:hover img {
+    border-color: gray;
+}
+
+
+.mainSelected img {
+    border-color: black;
+}
+
+.mainBadge {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    background: black;
+    color: white;
+    font-size: 0.6rem;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.addButton{
+    padding: 0.3rem 1rem;
+    background-color:#141718 ;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+}
+/*MANAGE*/
+.manageContainer {
+  padding: 2rem;
+}
+
+.manageContainer h2 {
+  margin-bottom: 2rem;
+}
+
+.productsTable {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.productRow {
+  display: grid;
+  grid-template-columns: 120px 1fr 150px;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid rgb(230, 230, 230);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.productImg img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.productInfo p {
+  margin: 0.3rem 0;
+  color: #444;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.editBtn {
+  background: #4c8bf5;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.deleteBtn {
+  background: #e74c3c;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}

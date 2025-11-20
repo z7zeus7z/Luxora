@@ -1,0 +1,152 @@
+.authContainer{
+    width: 100%;
+    min-height: 92vh;
+    display: grid;
+    grid-template:1fr 2fr/1fr;
+    grid-template-areas: 
+    "IMG"
+    "Log_Sign"
+    ;
+}
+
+.imgContainer{
+    grid-area: IMG;
+    background-image: url(../assets/logbg.png);
+    background-position: center;
+    background-color: #F3F5F7;
+    background-repeat: no-repeat;
+}
+
+.log_Sign{
+    grid-area: Log_Sign;
+    background-color: white;
+    padding: 3rem 4rem;
+    
+}
+
+/*LOGIN*/
+
+.logInContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    min-height: 20rem;
+}
+
+.log_Title{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.log_Title h4{
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.noAccount{
+    display: flex;
+    font-size: 0.8rem;
+    gap: 0.4rem;
+    color: gray;
+}
+.noAccount span {
+    color: blueviolet;
+    cursor: pointer;
+}
+
+.logForm form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    min-height: 20rem;
+}
+
+.formInput{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.formInput input{
+    border: none;
+    outline: none;
+    padding: 0 0.2rem;
+}
+
+
+.formOptions{
+    display:  flex;
+    font-size: 0.8rem;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 16.3rem;
+}
+
+.remember{
+    color: gray;
+    display: flex;
+    gap: 0.3rem;
+  
+}
+
+.remember input{
+    cursor: pointer;
+}
+
+.password, .email{
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    max-width: 16.3rem;
+}
+
+.nameContainer{
+   max-width: 16rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.Fname, .Lname{
+    border-bottom: 1px solid black; 
+    padding: 0.5rem 0;
+    width: 45%;
+}
+
+
+.icon{
+    cursor: pointer;
+}
+
+
+.SignUpButton button{
+    width: 100%;
+    max-width: 16.3rem;
+    background-color: #141718;
+    color: white;
+    padding: 1rem 0.6rem;
+    border: none;
+    border-radius: 0.6rem;
+    cursor: pointer;
+}
+
+/*MEDIA*/
+@media (min-width:900px) {
+    .authContainer{
+        grid-template:1fr/repeat(2,1fr);
+        grid-template-areas: 
+        "IMG Log_Sign"
+        ;
+    }
+    .log_Sign{
+        display: flex;
+        align-items: center;
+        padding: 0 10rem;
+    }
+    .formOptions{
+        font-size: 0.7rem;
+    }
+
+}

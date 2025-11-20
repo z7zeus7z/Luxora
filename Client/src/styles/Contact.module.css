@@ -1,0 +1,94 @@
+.contactContainer{
+    width: 80%;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template:repeat(3,auto)/1fr;
+    grid-template-areas: 
+    "Intro"
+    "About"
+    "Contact"
+    ;
+    padding: 5rem 0 8rem 0;
+    gap: 5rem;
+}
+
+.intro{
+    grid-area: Intro;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.mainIntro{
+    font-size: 2rem;
+}
+.secIntro{
+    font-size: 0.9rem;
+}
+/*===================*/
+.aboutContainer{
+    grid-area: About;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutImg{
+    width: 100%;
+    height: fit-content;
+}
+.aboutImg img {
+    width: 100%;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding:   1rem;
+}
+
+.about h6 {
+     font-size: 1.2rem;
+}
+/*=============*/
+
+.contacts{
+    grid-area: Contact;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+}
+
+.contactOptions{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.contactOption{
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+@media (min-width:1000px) {
+
+    .contactContainer{
+    
+    display: grid;
+    grid-template:repeat(2,auto)/repeat(2,auto);
+    grid-template-areas: 
+    "Intro Intro"
+    "About Contact"
+    ;
+   
+}
+
+}

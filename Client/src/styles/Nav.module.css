@@ -1,0 +1,194 @@
+
+
+.mainNavContainer{
+    width: 100%;
+    min-height: 5em;
+    background-color: #FFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.logo_Ham{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+
+}
+
+.links{
+    display: none;
+}
+
+.links ul{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+
+}
+
+
+.cartNumber{
+    width: 1.1rem;
+    height: 1.1rem;
+    background-color: black;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.8rem;
+}
+
+.loggedUser{
+    display: none;
+    align-items: center;
+gap: 1rem;
+}
+
+.navOptions{
+    display: none;
+}
+
+.logoutBtn{
+    background-color: transparent;
+    border: none;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.cartNumber p {
+    color: white;
+}
+
+/*HamLinks*/
+.HamLinksContainer{
+    width: 20rem;
+    min-height: 100vh;
+    background-color: #FFFF;
+    position: fixed;
+    top: 0;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.ham{
+    display: block;
+}
+
+.topHam,.bottomHam{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.logo_X{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search{
+    width: 100%;
+    min-height: 1rem;
+    border: 1px solid black;
+    display: flex;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    gap: 1rem;
+}
+
+.search input {
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+
+
+.hamLinks ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.cart_WishList{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.loggedInButtons{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+
+.options{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.op1,.op2{
+        display: none;
+    }
+
+.cart,.wishList{ 
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.mediaContainer{
+    display: flex;
+    gap: 1rem;
+    font-size: 1.4rem;
+}
+
+.signButton{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signButton button {
+     width: 69%;
+    padding: 0.9em 0.3rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: #141718;
+    color: white;
+    font-size: 1rem;
+}
+
+/*MEDIA*/
+@media (min-width:900px) {
+    .ham{
+        display: none;
+    }
+    .links{
+        display: block;
+    }
+    .op1,.op2{
+        display: block;
+    }
+    .loggedUser{
+        display: flex;
+    }
+    .navOptions{
+        display: block;
+    }
+}

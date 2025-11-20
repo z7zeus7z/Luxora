@@ -1,0 +1,260 @@
+.shopContainer{
+    width: 80%;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template:20rem auto auto 0.1fr/1fr;
+    grid-template-areas: 
+    "MainImg"
+    "Filter"
+    "Products"
+    "ShowButton"
+    ;
+    padding: 3rem 0;
+    gap: 2rem;
+}
+
+.mainImg{
+    grid-area: MainImg;
+    background-image: url(../assets/ShopBg.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    position: relative;
+    overflow: hidden;
+    max-height: 300px;
+}
+
+
+.mainImg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(222, 221, 221, 0.495); 
+  z-index: 0;
+}
+
+.mainImg > * {
+  position: relative;
+  z-index: 1; 
+  
+}
+
+.loc{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.pageTitle{
+    font-size: 1.5rem;
+}
+
+.quote{
+    font-size: 0.8rem;
+}
+
+.filterContainer{
+    grid-area: Filter;
+}
+
+.productsContainer{
+    grid-area: Products;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem ;
+    justify-content: center;
+}
+
+/*FILTER*/
+
+.filters{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.category{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.dopDownContainer{
+    width: 100%;
+    height: 2rem;
+    border: 1px solid gray;
+    border-radius:0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+}
+
+.dropDownMenu{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.dropDownOption{
+    background-color: #ffedc8;
+    padding: 1rem 1rem;
+    border-radius:0.5rem;
+    border: 1px solid gray;
+}
+
+/*SideFilter*/
+
+.sideFilterContainer {
+  display: none;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem;
+  background-color: #e8e3e3;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  
+}
+
+.filterIcon {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.filterIcon p {
+  margin: 0;
+}
+
+.filterCategory h3,
+.filterPrice h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 0.8rem;
+}
+
+.categoryOptions ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.categoryOptions li {
+  cursor: pointer;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.categoryOptions li:hover {
+  background-color: #ececec;
+  color: #000;
+}
+
+.activeFilter {
+  font-weight: bold;
+  color: black;
+}
+
+.priceOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.priceOptions label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  transition: all 0.2s ease;
+}
+
+.priceOptions label:hover {
+  background: #f5f5f5;
+}
+
+.priceOptions input[type="radio"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #999;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: border 0.2s ease;
+}
+
+
+.priceOptions input[type="radio"]:checked {
+  border: 6px solid #333; 
+}
+/*---------------*/
+
+/*Products*/
+
+.showMore{
+    grid-area: ShowButton;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.showMore button{
+    padding: 0.5rem 2rem ;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+}
+
+/*Media*/
+@media (min-width:600px) {
+    .filters{
+        flex-direction: row;
+    }
+    
+}
+@media (min-width:1000px) {
+    .filters{
+        display: none;
+    }
+
+    .sideFilterContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .shopContainer{
+    width: 80%;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template:20rem  4fr 0.3fr/0.2fr 1fr;
+    grid-template-areas: 
+    "MainImg MainImg"
+    "Filter Products"
+    "ShowButton ShowButton"
+    ;
+    padding: 3rem 0;
+    gap: 2rem;
+}
+    
+}
+

@@ -1,0 +1,225 @@
+.productDetailsContainer{
+    width: 80%;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template:repeat(2,auto)/1fr;
+    grid-template-areas: 
+    "ProductDetails"
+    "Review"
+    ;
+     padding: 3rem 0;
+}
+/*-------------------*/
+.productDetails{
+    grid-area: ProductDetails;
+    display: grid;
+    grid-template: repeat(3,auto)/1fr;
+    grid-template-areas: 
+    "Slider"
+    "Info"
+    "Order"
+    ;
+   
+}
+
+.location{
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+
+}
+
+.productSlider{
+    grid-area: Slider;
+    width: 20rem;
+}
+
+.productInfo{
+    grid-area: Info;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.orderProduct{
+    grid-area: Order;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.measurements h5{
+    font-size: 1rem;
+}
+
+.measurements p{
+    font-size: 0.8rem;
+}
+
+.color{
+    display: flex;
+    flex-direction: column;
+}
+
+.colorOptions{
+    width: 100%;
+    min-height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.colorImg{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.colorImg img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.quantity_whish{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quantity{
+    width: 30%;
+    height: 1.5rem;
+    background-color: rgb(190, 190, 190);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 0.8rem;
+    border-radius: 0.5rem;
+    max-width: 14rem;
+}
+
+.quantity button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.wish button{
+    cursor: pointer;
+    background-color: white;
+    padding: 0.2rem 3rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    
+}
+
+.addToCart {
+    width: 100%;
+}
+
+.addToCart button{
+    width: 100%;
+    padding: 0.5rem 3rem;
+    background-color: #141718;
+    color: white;
+    border-radius: 0.5rem;
+    border: none;
+    max-width: 14rem;
+    cursor: pointer;
+}
+/*--------------*/
+
+.review{
+    grid-area: Review;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    
+}
+
+.reviewTitle{
+    align-self: start;
+}
+
+.reviewContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.customerReviewContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.customerInfo{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.customerPic{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+}
+
+.customerPic img {
+    width: 100%;
+    height: 100%;
+   
+}
+
+.customerName p{
+    font-size: 0.8rem;
+}
+
+.customerReview p{
+    font-size: 0.9rem;
+
+}
+
+.loadmore{
+    width: 50%;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 1rem;
+    align-self: center;
+    max-width: 20rem;
+    cursor: pointer;
+}
+
+/*MEDIA*/
+@media (min-width:900px) {
+    .productDetails{
+    grid-template:repeat(2,auto)/repeat(2,auto);
+    grid-template-areas: 
+    "Slider Info"
+    "Slider Order"
+    ;
+    }
+    .productSlider{
+    width: 30rem;
+    }
+   
+}
+
+@media (min-width:1400px) {
+    .productSlider{
+    width: 40rem;
+    }
+}
