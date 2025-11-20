@@ -7,7 +7,7 @@ const ManageProducts = () => {
 
   const fetchProducts = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/products");
+      const res = await fetch("https://luxora-backend-0gll.onrender.com/api/products");
       const data = await res.json();
       setProducts(data);
     } catch (error) {
@@ -25,7 +25,7 @@ const ManageProducts = () => {
     if (!window.confirm("Are you sure you want to delete this product?")) return;
 
     try {
-      const res = await fetch(`http://localhost:5000/api/products/${id}`, {
+      const res = await fetch(`https://luxora-backend-0gll.onrender.com/api/products/${id}`, {
         method: "DELETE",
       });
 
